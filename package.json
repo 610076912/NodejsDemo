@@ -1,0 +1,11 @@
+{
+  "name": "NodejsDemo",
+  "version": "0.0.1",
+  "dependencies": {
+    "babel-eslint": "^8.0.1",
+    "chalk": "^2.3.0"
+  },
+  "scripts": {
+    "lint": "eslint ."
+  }
+}
