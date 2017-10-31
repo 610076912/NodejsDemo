@@ -11,12 +11,13 @@ const server = http.createServer((req, res) => {
     if (err) {
       res.code = 404
       res.setHeader('Content-Type', 'text/plain')
-      // TODO 请求头的类型和含义 this is test
+      // TODO 请求头的类型和含义 this is test test
       res.end(`${filePath} is not definde`)
       return false
     }
     if (stats.isFile()) {
       fs.createReadStream(filePath).pipe(res)
+      console.log(res)
       // TODO createReadStream 方法和 pipe方法。
     }
   })
