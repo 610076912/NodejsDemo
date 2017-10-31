@@ -1,10 +1,14 @@
 const http = require('http')
 const chalk = require('chalk')
+const path = require('path')
 const conf = require('./config/defaultConfig')
+
 const server = http.createServer((req, res) => {
+  const url = path.join(conf.root, req.url)
+
   res.statusCode = 200
   res.setHeader('Content-Type', 'text/plain')
-  res.end('Hello World')
+  res.end(url)
 })
 
 server.listen(conf.prot, conf.hostname, () => {
